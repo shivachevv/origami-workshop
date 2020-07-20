@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/RESTAPI
 /.pnp
 .pnp.js
 
