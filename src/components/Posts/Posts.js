@@ -13,7 +13,7 @@ class Posts extends Component {
     }
 
     getOrigamis = async () => {
-        const promise = await fetch('http://localhost:9999/api/origami/')
+        const promise = await fetch(`http://localhost:9999/api/origami/?length=${this.props.length}`)
         const origamis = await promise.json()
         this.setState({
             origamis

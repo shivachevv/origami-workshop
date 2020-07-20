@@ -22,6 +22,7 @@ function App() {
             <Route path="/share" component={ShareYourThoughts}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/register" component={Register}></Route>
+            <Route path="/profile" component={Register}></Route>
           </Switch>
         </div>
         <Footer></Footer>

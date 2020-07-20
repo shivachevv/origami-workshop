@@ -1,31 +1,42 @@
 import React from 'react';
 import Heading from '../../components/Heading/Heading'
 import Button from '../../components/Button/Button'
+import Input from '../../components/Input/Input'
 
+class Register extends React.Component {
+    constructor(props) {
+        super(props);
 
-const Register = () => {
-    return (
-        <div>
-            <Heading>Register Page</Heading>
-            <form>
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" type="email"></input>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input id="password" type="password"></input>
-                </div>
-                <div>
-                    <label for="rePassword">Repeat Password</label>
-                    <input id="rePassword" type="password"></input>
-                </div>
-                <div>
-                    <Button>Register</Button>
-                </div>
-            </form>
-        </div>
-    );
+        this.state = {
+            email: "",
+            password: "",
+            rePassword: ""
+        }
+    }
+
+    onChange = (event, type)=>{
+        const newState = {}
+        newState[type] = event.target.value
+        this.setState(newState)
+    }
+
+    render() {
+        const {email, password, rePassword} = this.state
+        return (
+            <div>
+                <Heading>Register Page</Heading>
+                <form>
+                    <Input value={email} id="email" label="Email" type="email" onChange={(e) => this.onChange(e, "email")} />
+                    <Input value={password} id="password" label="Password" type="password" onChange={(e) => this.onChange(e, "password")} />
+                    <Input value={rePassword} id="rePassword" label="Repeat Password" type="password" onChange={(e) => this.onChange(e, "rePassword")} />
+                    <div>
+                        <Button>Register</Button>
+                    </div>
+                </form>
+            </div>
+        );
+    }
+
 };
 
 export default Register;

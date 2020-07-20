@@ -1,6 +1,7 @@
 import React from 'react';
 import Heading from '../../components/Heading/Heading'
 import styles from './share.module.css'
+import Posts from '../../components/Posts/Posts';
 
 const Share = () => {
     return (
@@ -12,9 +13,7 @@ const Share = () => {
             </div>
             <div>
                 <h2>Last 3 posts on your wall</h2>
-                <div>Post 1</div>
-                <div>Post 2</div>
-                <div>Post 3</div>
+                <Posts length="3"></Posts>
             </div>
         </div>
     );
