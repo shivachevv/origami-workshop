@@ -1,10 +1,20 @@
 import React from 'react';
-import './App.css';
+import styles from './app.module.css'
+import Header from './components/Header/Header'
+import Aside from './components/Aside/Aside'
+import Main from './components/Main/Main'
+import Footer from './components/Footer/Footer'
+
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className={styles.app}>
+      <Header></Header>
+      <div className={styles.container}>
+        <Aside></Aside>
+        <Main></Main>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
