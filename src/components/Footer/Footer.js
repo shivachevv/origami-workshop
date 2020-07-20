@@ -1,18 +1,17 @@
 import React from 'react';
 import Link from '../Header/Link'
 import styles from './footer.module.css'
+import getNavigation from '../../utils/navigation'
 
 const Footer = (props) => {
+    const links = getNavigation()
 
     return (
         <footer className={styles.footer}>
             <ul>
-                <Link href="#" title="Going to 1"></Link>
-                <Link href="#" title="Going to 2"></Link>
-                <Link href="#" title="Going to 3"></Link>
-                <Link href="#" title="Going to 4"></Link>
-                <Link href="#" title="Going to 5"></Link>
-                <Link href="#" title="Going to 6"></Link>
+                {links.map(navEl => {
+                    return <Link href={navEl.path} title={navEl.title}></Link>
+                })}
             </ul>
             <p>SoftUni @2020</p>
         </footer>
