@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './post.module.css'
-import logo from '../../images/blue-origami-bird.png' 
+import logo from '../../images/blue-origami-bird.png'
 
-const Post = ( {description, author} ) => {
+const Post = ({ description, author, id }) => {
 
   return (
     <div className={styles.post}>
+      <span>#{id + 1}</span>
       <img className={styles.image} src={logo} />
       <p className={styles.description}>
         {description}
@@ -15,7 +16,7 @@ const Post = ( {description, author} ) => {
           <small>Author: </small>
           {author.username}
         </span>
-        
+
       </div>
     </div>
   )

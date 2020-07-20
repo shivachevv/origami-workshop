@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './main.module.css';
-import Posts from '../Posts/Posts'
+import Posts from '../../components/Posts/Posts'
+import Heading from '../../components/Heading/Heading'
 
 const Main = (props) => {
     return (
         <main className={styles.main}>
-            <h1>Some Heading</h1>
+            <Heading>Publications</Heading>
             <Posts></Posts>
         </main>
     );

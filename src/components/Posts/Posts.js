@@ -26,9 +26,9 @@ class Posts extends Component {
 
     renderOrigamis() {
         const { origamis } = this.state
-        return origamis.map(o => {
+        return origamis.map((o,i) => {
             return (
-                <Post {...o} key={o._id}></Post>
+                <Post {...o} key={o._id} id={i}></Post>
             )
         })
     }

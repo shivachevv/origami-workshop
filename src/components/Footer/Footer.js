@@ -10,7 +10,7 @@ const Footer = (props) => {
         <footer className={styles.footer}>
             <ul>
                 {links.map(navEl => {
-                    return <Link href={navEl.path} title={navEl.title}></Link>
+                    return <Link href={navEl.path} title={navEl.title} key={navEl.path}></Link>
                 })}
             </ul>
             <p>SoftUni @2020</p>

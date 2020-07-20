@@ -12,7 +12,7 @@ const Header = (props) => {
             <img className={styles.image} src={logo} />
             <ul>
                 {links.map(navEl => {
-                    return <Link href={navEl.path} title={navEl.title}></Link>
+                    return <Link href={navEl.path} title={navEl.title} key={navEl.path}></Link>
                 })}
             </ul>
         </nav>
